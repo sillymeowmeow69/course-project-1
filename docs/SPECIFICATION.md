@@ -29,3 +29,14 @@ Responsiveness:
 Site should work on desktop and mobile primarily and also support 4K screen and tablet screens. No smartwatch or 8K screen support
 
 
+
+
+Visual Design:
+Dark themed, warm amber light in dark booth, interface borrow from studio hardware: engraved labels, levell meters, visual energy on spent on audio
+
+
+--ink	#15120F	page background, warm near-black
+--booth	#211C17	panels, cards
+--cream	#F3EBE0	body text
+--amber	#F2A93B	brand accent, headings, hover, play controls
+--amber-dim	#A87527	pressed and inactive amber
