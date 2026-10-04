@@ -3,6 +3,7 @@
     color-scheme: dark;
     --ink: #15120f;
     --booth: #211c17;
+    --foam: #2e2820;
     --cream: #f3ebe0;
     --amber: #f2a93b;
     --amber-dim: #a87527;
@@ -33,7 +34,7 @@
     --space-2xl: 4.5rem;
     --space-3xl: 6.5rem;
 
-
+    --rule: 1px solid var(--foam);
 }
 
 
@@ -43,7 +44,17 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-
+body {
+    margin: 0;
+    background-color: var(--ink);
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    line-height: 1.65;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 /* A tag color scheme */
 a:link {
@@ -78,6 +89,7 @@ a:focus-visible {
     top: 0;
     z-index: 50;
     background-color: rgba(21, 18, 15, 0.94);
+    border-bottom: var(--rule);
 }
 
 .header-inner {
@@ -86,7 +98,6 @@ a:focus-visible {
     align-items: center;
     gap: var(--space-s);
     padding-block: var(--space-2xs);
-    margin-right: var(--space-2xs);
 }
 
 
@@ -110,4 +121,12 @@ a:focus-visible {
     letter-spacing: 0.02em;
     line-height: 1;
     color: var(--cream);
+}
+
+.brand-name span {
+    display: block;
+    font-size: 0.54em;
+    letter-spacing: 0.34em;
+    font-weight: 400;
+    color: var(--amber);
 }
