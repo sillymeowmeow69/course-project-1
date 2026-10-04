@@ -37,7 +37,6 @@
 }
 
 
-
 /* Enforce smooth scroll and normalize size behaviour on mobile  */
 html {
     scroll-behavior: smooth;
@@ -73,10 +72,42 @@ a:focus-visible {
 
 
 
-
+/* Header */
 .site-header {
     position: sticky;
     top: 0;
     z-index: 50;
     background-color: rgba(21, 18, 15, 0.94);
+}
+
+.header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-s);
+    padding-block: var(--space-2xs);
+    margin-right: var(--space-2xs);
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    text-decoration: none;
+    margin-right: auto;
+}
+
+.brand:hover .brand-name {
+    color: var(--amber);
+}
+
+.brand-name {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    color: var(--cream);
 }
