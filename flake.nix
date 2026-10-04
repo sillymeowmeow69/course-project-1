@@ -14,13 +14,23 @@
         text = builtins.readFile ./scripts/serve.sh;
       };
 
+      build = pkgs.writeShellApplication {
+        name = "build";
+        text = builtins.readFile ./scripts/build.sh;
+      };
+
     in {
- 
-      # nix run serve
       apps.${system} = {
+        # nix run .#serve
         serve = {
           type = "app";
           program = "${serve}/bin/serve";
+        };
+
+        # nix run .#build
+        build = {
+          type = "app";
+          program = "${build}/bin/build";
         };
       };
 
@@ -29,6 +39,7 @@
         default = pkgs.mkShell {
           packages = with pkgs; [
             serve
+            build
           ];
           shellHook = ''echo "meow"'';
         };
