@@ -8,11 +8,8 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
 
-      serve = pkgs.writeShellApplication {
-        name = "serve";
-        runtimeInputs = [ pkgs.python3 ];
-        text = builtins.readFile ./scripts/serve.sh;
-      };
+      serve = pkgs.writers.writePython3Bin "serve" { }
+        (builtins.readFile ./scripts/nocache_server.py);
 
       build = pkgs.writeShellApplication {
         name = "build";
