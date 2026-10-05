@@ -1,3 +1,20 @@
+/* Header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(21, 18, 15, 0.94);
+    border-bottom: var(--rule);
+}
+
+.header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-s);
+    padding-block: var(--space-2xs);
+}
+
 .nav-toggle {
     position: absolute;
     opacity: 0;
