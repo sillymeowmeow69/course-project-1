@@ -130,3 +130,152 @@ a:focus-visible {
     font-weight: 400;
     color: var(--amber);
 }
+
+
+.section {
+    padding-block: var(--space-xl);
+    border-bottom: var(--rule);
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+
+.waveform {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 46px;
+    margin-bottom: var(--space-m);
+}
+
+.waveform span {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 3px;
+    max-width: 7px;
+    height: 22%;
+    background-color: var(--amber-dim);
+    border-radius: 2px;
+    transform-origin: bottom center;
+    animation: level 1900ms ease-in-out infinite;
+}
+
+.waveform span:nth-child(3n) {
+    background-color: var(--amber);
+    animation-duration: 2400ms;
+}
+
+.waveform span:nth-child(5n) {
+    animation-duration: 1500ms;
+}
+
+.waveform span:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+.waveform span:nth-child(2) {
+    animation-delay: 90ms;
+}
+
+.waveform span:nth-child(3) {
+    animation-delay: 180ms;
+}
+
+.waveform span:nth-child(4) {
+    animation-delay: 270ms;
+}
+
+.waveform span:nth-child(5) {
+    animation-delay: 360ms;
+}
+
+.waveform span:nth-child(6) {
+    animation-delay: 450ms;
+}
+
+.waveform span:nth-child(7) {
+    animation-delay: 540ms;
+}
+
+.waveform span:nth-child(8) {
+    animation-delay: 630ms;
+}
+
+.waveform span:nth-child(9) {
+    animation-delay: 720ms;
+}
+
+.waveform span:nth-child(10) {
+    animation-delay: 810ms;
+}
+
+.waveform span:nth-child(11) {
+    animation-delay: 900ms;
+}
+
+.waveform span:nth-child(12) {
+    animation-delay: 990ms;
+}
+
+.waveform span:nth-child(13) {
+    animation-delay: 1080ms;
+}
+
+.waveform span:nth-child(14) {
+    animation-delay: 1170ms;
+}
+
+.waveform span:nth-child(15) {
+    animation-delay: 1260ms;
+}
+
+.waveform span:nth-child(16) {
+    animation-delay: 1350ms;
+}
+
+.waveform span:nth-child(17) {
+    animation-delay: 1440ms;
+}
+
+.waveform span:nth-child(18) {
+    animation-delay: 1530ms;
+}
+
+.waveform span:nth-child(19) {
+    animation-delay: 1620ms;
+}
+
+.waveform span:nth-child(20) {
+    animation-delay: 1710ms;
+}
+
+@keyframes level {
+    0% {
+        transform: scaleY(1);
+    }
+
+    25% {
+        transform: scaleY(3.4);
+    }
+
+    50% {
+        transform: scaleY(1.6);
+    }
+
+    75% {
+        transform: scaleY(4.2);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .waveform span {
+        animation: none;
+        transform: scaleY(2.4);
+    }
+}
