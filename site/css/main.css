@@ -143,6 +143,18 @@ main {
     flex: 1 0 auto;
 }
 
+.eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.26em;
+    color: var(--amber);
+    margin-bottom: var(--space-2xs);
+}
+
+.hero-grid {
+    display: grid;
+}
 
 .waveform {
     display: flex;
@@ -150,6 +162,7 @@ main {
     gap: 3px;
     height: 46px;
     margin-bottom: var(--space-m);
+    margin-left: var(--space-m);
 }
 
 .waveform span {
