@@ -1,8 +1,8 @@
 @media (min-width: 768px) {
-    .hero-grid {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
 }
 
 
@@ -13,53 +13,53 @@
 */
 @media (min-width: 1024px) {
 
-    .nav-toggle,
-    .nav-button {
-        display: none;
-    }
+  .nav-toggle,
+  .nav-button {
+    display: none;
+  }
 
-    .site-nav {
-        flex-basis: auto;
-        max-height: none;
-        overflow: visible;
-    }
+  .site-nav {
+    flex-basis: auto;
+    max-height: none;
+    overflow: visible;
+  }
 
-    /* Lay the nav links out horizontally */
-    .nav-list {
-        flex-direction: row;
-        align-items: center;
-        gap: var(--space-3xs);
-        padding: 0;
-    }
+  /* Lay the nav links out horizontally */
+  .nav-list {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-3xs);
+    padding: 0;
+  }
 
-    .nav-link {
-        border-left: 0;
-        border-bottom: 3px solid transparent;
-        font-size: var(--step--1);
-        letter-spacing: 0.14em;
-    }
+  .nav-link {
+    border-left: 0;
+    border-bottom: 3px solid transparent;
+    font-size: var(--step--1);
+    letter-spacing: 0.14em;
+  }
 
-    .nav-link:hover {
-        background-color: transparent;
-        border-bottom-color: var(--amber);
-    }
+  .nav-link:hover {
+    background-color: transparent;
+    border-bottom-color: var(--amber);
+  }
 
-    .nav-link[aria-current="page"] {
-        background-color: transparent;
-        border-bottom-color: var(--amber);
-    }
+  .nav-link[aria-current="page"] {
+    background-color: transparent;
+    border-bottom-color: var(--amber);
+  }
 
-    .nav-cta {
-        margin-top: 0;
-        margin-left: var(--space-2xs);
-        border-bottom-color: transparent;
-    }
+  .nav-cta {
+    margin-top: 0;
+    margin-left: var(--space-2xs);
+    border-bottom-color: transparent;
+  }
 
-    .nav-cta:hover {
-        border-bottom-color: transparent;
-    }
+  .nav-cta:hover {
+    border-bottom-color: transparent;
+  }
 
-    .nav-cta[aria-current="page"] {
-        border-bottom-color: transparent;
-    }
+  .nav-cta[aria-current="page"] {
+    border-bottom-color: transparent;
+  }
 }

@@ -1,89 +1,89 @@
 /* Header */
 .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background-color: rgba(21, 18, 15, 0.94);
-    border-bottom: var(--rule);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(21, 18, 15, 0.94);
+  border-bottom: var(--rule);
 }
 
 .header-inner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: var(--space-s);
-    padding-block: var(--space-2xs);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-s);
+  padding-block: var(--space-2xs);
 }
 
 .nav-toggle {
-    position: absolute;
-    opacity: 0;
-    width: 44px;
-    height: 44px;
-    margin: 0;
+  position: absolute;
+  opacity: 0;
+  width: 44px;
+  height: 44px;
+  margin: 0;
 }
 
 .nav-toggle:focus-visible+.nav-button {
-    outline: 3px solid var(--focus);
-    outline-offset: 2px;
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
 }
 
 .site-nav {
-    flex-basis: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 280ms ease;
+  flex-basis: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 280ms ease;
 }
 
 .nav-toggle:checked~.site-nav {
-    max-height: 34rem;
+  max-height: 34rem;
 }
 
 
 
 .nav-button {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2xs);
-    min-height: 44px;
-    padding-inline: var(--space-2xs);
-    font-family: var(--font-display);
-    font-size: var(--step-0);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--cream);
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  min-height: 44px;
+  padding-inline: var(--space-2xs);
+  font-family: var(--font-display);
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--cream);
+  cursor: pointer;
 }
 
 .nav-button:hover {
-    color: var(--amber);
+  color: var(--amber);
 }
 
 
 .nav-button-bars {
-    position: relative;
-    display: block;
-    width: 26px;
-    height: 2px;
-    background-color: currentcolor;
+  position: relative;
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: currentcolor;
 }
 
 .nav-button-bars::before,
 .nav-button-bars::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 26px;
-    height: 2px;
-    background-color: currentcolor;
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 26px;
+  height: 2px;
+  background-color: currentcolor;
 }
 
 .nav-button-bars::before {
-    top: -8px;
+  top: -8px;
 }
 
 .nav-button-bars::after {
-    top: 8px;
+  top: 8px;
 }
 
 
@@ -91,56 +91,56 @@
 
 
 .nav-list {
-    list-style: none;
-    margin: 0;
-    padding: 0 0 var(--space-s) 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 var(--space-s) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .nav-link {
-    display: block;
-    padding: var(--space-2xs) var(--space-xs);
-    border-left: 3px solid transparent;
-    font-family: var(--font-display);
-    font-size: var(--step-0);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    text-decoration: none;
+  display: block;
+  padding: var(--space-2xs) var(--space-xs);
+  border-left: 3px solid transparent;
+  font-family: var(--font-display);
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
 }
 
 .nav-link:hover {
-    background-color: var(--booth);
-    border-left-color: var(--amber);
+  background-color: var(--booth);
+  border-left-color: var(--amber);
 }
 
 .nav-link[aria-current="page"] {
-    color: var(--amber);
-    border-left-color: var(--amber);
-    background-color: var(--booth);
+  color: var(--amber);
+  border-left-color: var(--amber);
+  background-color: var(--booth);
 }
 
 .nav-cta {
-    margin-top: var(--space-2xs);
-    background-color: var(--amber);
-    color: var(--ink);
-    border-left-color: var(--amber);
-    text-align: center;
+  margin-top: var(--space-2xs);
+  background-color: var(--amber);
+  color: var(--ink);
+  border-left-color: var(--amber);
+  text-align: center;
 }
 
 .nav-cta:link,
 .nav-cta:visited {
-    color: var(--ink);
+  color: var(--ink);
 }
 
 .nav-cta:hover {
-    background-color: var(--cream);
-    color: var(--ink);
+  background-color: var(--cream);
+  color: var(--ink);
 }
 
 .nav-cta[aria-current="page"] {
-    background-color: var(--amber);
-    color: var(--ink);
-    border-left-color: var(--amber);
+  background-color: var(--amber);
+  color: var(--ink);
+  border-left-color: var(--amber);
 }
