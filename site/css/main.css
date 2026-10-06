@@ -8,6 +8,7 @@
   --amber: #f2a93b;
   --amber-dim: #a87527;
   --focus: #62d2c3;
+  --muted: #b3a796;
 
 
   /* Nice fonts */
@@ -35,8 +36,18 @@
   --space-3xl: 6.5rem;
 
   --rule: 1px solid var(--foam);
+  --shell: 1320px;
+  --gutter: clamp(1rem, 4vw, 3rem);
 }
 
+
+/* Box-sizing reset: without this, width:100% + padding (eg. .shell) adds
+   padding on top of the width instead of inside it, overflowing the viewport */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* Enforce smooth scroll and normalize size behaviour on mobile  */
 html {
@@ -56,6 +67,20 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Images/svg keep their own size unless it exceeds the container */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* <audio>/<video> default to a fixed intrinsic width (eg. ~300px for audio)
+   that doesn't shrink inside narrow flex/grid items, so force it to fill instead */
+audio,
+video {
+  width: 100%;
 }
 
 /* A tag color scheme */
@@ -127,6 +152,22 @@ main {
   flex: 1 0 auto;
 }
 
+
+.shell {
+  width: 100%;
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(21, 18, 15, 0.94);
+  border-bottom: var(--rule);
+}
+
 .eyebrow {
   font-family: var(--font-mono);
   font-size: var(--step--1);
@@ -138,6 +179,11 @@ main {
 
 .hero-grid {
   display: grid;
+  gap: var(--space-m);
+}
+
+.hero-grid>* {
+  min-width: 0;
 }
 
 .hero-title {
