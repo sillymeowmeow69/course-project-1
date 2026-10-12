@@ -3,6 +3,15 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
+
+  .split {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 

@@ -40,3 +40,15 @@ Dark themed, warm amber light in dark booth, interface borrow from studio hardwa
 --cream	#F3EBE0	body text
 --amber	#F2A93B	brand accent, headings, hover, play controls
 --amber-dim	#A87527	pressed and inactive amber
+
+
+fictional contact infomation:
+Address: Roomankatu 5 Liiketila, 00560 Helsinki
+Open hours:
+Mondays 12:00 – 15:00
+Thursdays from 16:00 – 19:00
+check -> https://cornern.tlk.fi/ for further infomation
+
+best reached by email: 
+victor@victorsvoicing.fi
+

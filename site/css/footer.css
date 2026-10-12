@@ -8,9 +8,12 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: var(--space-l);
   margin-bottom: var(--space-l);
+}
+
+.footer-grid>* {
+  min-width: 0;
 }
 
 .footer-grid h2 {
@@ -26,6 +29,7 @@
   margin: 0;
   display: grid;
   gap: var(--space-3xs);
+  overflow-wrap: anywhere;
 }
 
 .footer-bottom {
