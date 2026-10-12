@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/waveform.css">
   <link rel="stylesheet" href="css/media-query.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/booking.css">
 
 </head>
 
@@ -29,7 +30,7 @@
           <li><a class="nav-link" href="about.html">About</a></li>
           <li><a class="nav-link" href="demos.html">Demos</a></li>
           <li><a class="nav-link" href="contact.html">Contact</a></li>
-          <li><a class="nav-link nav-cta" href="booking.html">Book Victor</a></li>
+          <li><a class="nav-link nav-cta" href="booking.html" aria-current="page">Book Victor</a></li>
         </ul>
       </nav>
     </div>
@@ -40,20 +41,86 @@
     <section class="section page-header">
       <div class="shell">
         <p class="eyebrow">Booking</p>
-        <h1>Book me</h1>
-        <p class="lead">Find booking interface below</p>
+        <h1>Book <span>Victor</span></h1>
+        <p class="lead">Send the script. I reply within two or three days.</p>
       </div>
     </section>
 
-
     <section class="section">
       <div class="shell split">
-        <div>
-          <h2>Press down here</h2>
+        <form class="panel info-card booking-form" action="mailto:victor@victorsvoicing.fi" method="post"
+          enctype="text/plain">
+          <h2>Your <span>brief</span></h2>
+
+          <fieldset>
+            <legend>You</legend>
+            <p class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required>
+            </p>
+            <p class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>The job</legend>
+            <p class="field">
+              <label for="kind">What do you need</label>
+              <select id="kind" name="kind">
+                <option value="characters">Character voices</option>
+                <option value="narration">Narration</option>
+                <option value="spot">Short spot</option>
+                <option value="other">Something else</option>
+              </select>
+            </p>
+            <p class="field">
+              <label for="deadline">Deadline</label>
+              <input id="deadline" name="deadline" type="date">
+            </p>
+            <p class="field">
+              <label for="script">Script</label>
+              <textarea id="script" name="script" rows="7" required></textarea>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Session</legend>
+            <p class="field choice">
+              <input id="remote" name="session" type="radio" value="remote" checked>
+              <label for="remote">Just send me the audio</label>
+            </p>
+            <p class="field choice">
+              <input id="meet" name="session" type="radio" value="meet">
+              <label for="meet">I would like to meet in person</label>
+            </p>
+            <p class="caption">In person means Cornern in Helsinki, at a time we agree on. Otherwise I record at my
+              place.</p>
+          </fieldset>
+
           <p class="button-row">
-            <a class="button button-primary" href="booking.html">Start a booking</a>
-            <a class="button" href="contact.html">Find the studio</a>
+            <button class="button button-primary" type="submit">Send the brief</button>
           </p>
+        </form>
+
+        <div>
+          <h2>What <span>happens next</span></h2>
+          <ol>
+            <li>I read your script and reply in two or three days.</li>
+            <li>We agree on a price.</li>
+            <li>You get the audio within three working days.</li>
+          </ol>
+
+          <h2>Good to <span>know</span></h2>
+          <ul>
+            <li>Prices are agreed per job, not per list.</li>
+            <li>Two or three takes per line, so you can pick.</li>
+            <li>If no take fits, the next round is free.</li>
+            <li>Recordings are in English.</li>
+          </ul>
+
+          <p>Rather ask something first? <a href="contact.html">Send an email instead.</a></p>
         </div>
       </div>
     </section>

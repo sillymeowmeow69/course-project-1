@@ -1,0 +1,93 @@
+/*
+  Booking stylesheet.
+*/
+
+.booking-form fieldset {
+  margin: 0 0 var(--space-m) 0;
+  padding: var(--space-s) var(--space-m) var(--space-xs);
+  border: var(--rule);
+  border-radius: var(--radius);
+}
+
+.booking-form legend {
+  padding-inline: var(--space-2xs);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--amber);
+}
+
+.field {
+  display: grid;
+  gap: var(--space-3xs);
+  max-width: none;
+  margin-bottom: var(--space-s);
+}
+
+.field label {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+
+/* Radio rows read better side by side than stacked */
+.field.choice {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--space-2xs);
+  margin-bottom: var(--space-2xs);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: var(--space-2xs) var(--space-xs);
+  border: var(--rule);
+  border-radius: var(--radius);
+  background-color: var(--ink);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+}
+
+textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+input[type="radio"] {
+  width: 20px;
+  min-height: 20px;
+  height: 20px;
+  padding: 0;
+  accent-color: var(--amber);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--amber-dim);
+}
+
+/* The submit button is a <button>, so it needs the shared .button rules not
+   to be undone by the input styling above */
+.booking-form button {
+  width: auto;
+  background-color: var(--amber);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.booking-form button:hover {
+  background-color: var(--cream);
+}
