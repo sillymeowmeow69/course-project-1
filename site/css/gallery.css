@@ -1,0 +1,59 @@
+/*
+  Gallery stylesheet.
+*/
+
+.gallery-body {
+  display: block;
+  min-height: 0;
+  padding: var(--space-m);
+  background-image: none;
+  background-color: var(--booth);
+}
+
+.gallery-heading {
+  font-size: var(--step-1);
+  color: var(--amber);
+}
+
+.gallery-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-s);
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+}
+
+.gallery-list li {
+  margin: 0;
+}
+
+.gallery-list a {
+  display: block;
+  text-decoration: none;
+}
+
+.gallery-list img {
+  display: block;
+  width: 100%;
+  border: var(--rule);
+  border-radius: var(--radius);
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.gallery-list a:hover img {
+  border-color: var(--amber);
+  transform: scale(1.02);
+}
+
+.gallery-list span {
+  display: block;
+  margin-top: var(--space-3xs);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+
+.gallery-list a:hover span {
+  color: var(--amber);
+}

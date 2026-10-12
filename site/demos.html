@@ -40,21 +40,78 @@
     <section class="section page-header">
       <div class="shell">
         <p class="eyebrow">Demos</p>
-        <h1>Listen to my featured impressions</h1>
-        <p class="lead">Find everything below somewhere</p>
+        <h1>Listen <span>first</span></h1>
+        <p class="lead">A few takes, a short clip from the booth, and some pictures.</p>
       </div>
     </section>
 
+    <section class="section">
+      <div class="shell">
+        <h2>Voice <span>reels</span></h2>
+        <div class="card-grid">
+          <article class="panel card">
+            <h3>Characters</h3>
+            <p>A dwarf king, a nervous shopkeeper, a very rude bird.</p>
+            <audio controls preload="none">
+              <source src="media/audio/reel-character.ogg" type="audio/ogg">
+              <source src="media/audio/reel-character.mp3" type="audio/mpeg">
+              <a href="media/audio/reel-character.mp3">Download the character reel</a>
+            </audio>
+          </article>
+          <article class="panel card">
+            <h3>Narration</h3>
+            <p>Steady reading for explainers and guides.</p>
+            <audio controls preload="none">
+              <source src="media/audio/reel-narration.ogg" type="audio/ogg">
+              <source src="media/audio/reel-narration.mp3" type="audio/mpeg">
+              <a href="media/audio/reel-narration.mp3">Download the narration reel</a>
+            </audio>
+          </article>
+          <article class="panel card">
+            <h3>Short spots</h3>
+            <p>Thirty seconds, one message, done.</p>
+            <audio controls preload="none">
+              <source src="media/audio/reel-spot.ogg" type="audio/ogg">
+              <source src="media/audio/reel-spot.mp3" type="audio/mpeg">
+              <a href="media/audio/reel-spot.mp3">Download the spot reel</a>
+            </audio>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section class="section">
       <div class="shell split">
         <div>
-          <h2>Press down here</h2>
+          <h2>In the <span>booth</span></h2>
+          <video class="video-frame" controls preload="none" width="1280" height="720"
+            poster="media/images/video-poster.jpg">
+            <source src="media/video/booth-clip.webm" type="video/webm">
+            <source src="media/video/booth-clip.mp4" type="video/mp4">
+            <a href="media/video/booth-clip.mp4">Download the booth clip</a>
+          </video>
+          <p class="caption">A minute of recording, start to finish.</p>
+        </div>
+        <div>
+          <h2>How a take <span>happens</span></h2>
+          <ol>
+            <li>You send the script.</li>
+            <li>I read two or three takes.</li>
+            <li>You pick one.</li>
+          </ol>
+          <p>If none of them fit, the next round is free.</p>
           <p class="button-row">
-            <a class="button button-primary" href="booking.html">Start a booking</a>
-            <a class="button" href="contact.html">Find the studio</a>
+            <a class="button button-primary" href="booking.html">Send a script</a>
           </p>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Picture <span>gallery</span></h2>
+        <p>Five pictures, loaded as thumbnails. Click one to see it full size.</p>
+        <iframe class="gallery-frame" src="gallery.html" title="Gallery of pictures of Victor" loading="lazy"></iframe>
       </div>
     </section>
 
