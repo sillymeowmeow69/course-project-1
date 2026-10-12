@@ -262,31 +262,24 @@ main {
 }
 
 
-.pull-quote {
+/* Floated portrait. Mobile first: a plain stacked block here, and only from
+   the tablet breakpoint up does it float out of the flow so the text wraps
+   around it. .flow-text clears the float again afterwards. */
+.float-figure {
   margin: 0 0 var(--space-m) 0;
-  padding: var(--space-m);
-  background-color: var(--booth);
-  border-left: 3px solid var(--amber);
-  border-radius: var(--radius);
-  font-family: var(--font-display);
-  font-size: var(--step-2);
-  line-height: 1.25;
-  text-transform: uppercase;
 }
 
-.pull-quote p {
-  margin: 0;
-  max-width: none;
-}
-
-.pull-quote cite {
+.float-figure img {
   display: block;
+  width: 100%;
+  border: var(--rule);
+  border-radius: var(--radius);
+}
+
+.float-figure figcaption {
   margin-top: var(--space-2xs);
   font-family: var(--font-mono);
   font-size: var(--step--1);
-  font-style: normal;
-  letter-spacing: 0.14em;
-  text-transform: none;
   color: var(--muted);
 }
 
@@ -294,6 +287,77 @@ main {
   content: "";
   display: block;
   clear: both;
+}
+
+/* Card grid. auto-fit means it reflows on its own from one column to three
+   without needing a breakpoint of its own */
+.card-grid {
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  margin-bottom: var(--space-m);
+}
+
+.card {
+  padding: var(--space-m);
+}
+
+.card h3 {
+  color: var(--amber);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+ol,
+ul {
+  padding-left: var(--space-m);
+  margin-block: 0 var(--space-s);
+}
+
+li {
+  margin-bottom: var(--space-3xs);
+}
+
+.caption,
+.featured figcaption {
+  margin-top: var(--space-2xs);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+
+/* Capped so the photo does not grow to the full width of the shell */
+.featured {
+  margin: 0;
+  max-width: 30rem;
+}
+
+.featured img {
+  display: block;
+  width: 100%;
+  border: var(--rule);
+  border-radius: var(--radius);
+}
+
+.video-frame {
+  display: block;
+  width: 100%;
+  border: var(--rule);
+  border-radius: var(--radius);
+  background-color: #000;
+}
+
+/* The gallery lives in its own small HTML document loaded through an iframe,
+   so it needs a fixed height here and scrolls internally */
+.gallery-frame {
+  display: block;
+  width: 100%;
+  height: 26rem;
+  border: var(--rule);
+  border-radius: var(--radius);
+  background-color: var(--booth);
 }
 
 .button-row {

@@ -14,9 +14,9 @@
   }
 
   /* Enough measure to wrap text beside a floated block */
-  .pull-quote {
+  .float-figure {
     float: right;
-    width: 17rem;
+    width: 16rem;
     margin-left: var(--space-l);
   }
 }
@@ -90,7 +90,7 @@
     grid-template-columns: 1.1fr 0.9fr;
   }
 
-  .pull-quote {
-    width: 21rem;
+  .float-figure {
+    width: 20rem;
   }
 }
