@@ -1,0 +1,156 @@
+/*
+  Document stylesheet.
+
+  Loaded after the shared stylesheets by the two text-heavy pages, the
+  specification and the web report. Those pages need things no other page
+  does: colour swatches, a comparison table and type samples.
+*/
+
+/* Give the headings air, since these pages are one long read */
+.doc h2 {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-s);
+  border-top: var(--rule);
+}
+
+.doc h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.doc h3 {
+  margin-top: var(--space-m);
+}
+
+.doc ul,
+.doc ol {
+  max-width: 68ch;
+}
+
+/* Inline code, used in the report when naming a selector or a property */
+.doc code {
+  padding: 0.1em 0.35em;
+  border: var(--rule);
+  border-radius: 3px;
+  background-color: var(--booth);
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--amber);
+}
+
+.sitemap-figure {
+  max-width: 48rem;
+}
+
+.sitemap-figure img {
+  background-color: var(--booth);
+  padding: var(--space-s);
+}
+
+/* Colour swatches. The background of each one is the colour it names, so the
+   palette is shown rather than described */
+.swatch-list {
+  list-style: none;
+  margin: 0 0 var(--space-m) 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-s);
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+}
+
+.swatch {
+  margin: 0;
+  padding: var(--space-s);
+  border: var(--rule);
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  line-height: 1.5;
+}
+
+.swatch span {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.swatch-ink {
+  background-color: #15120f;
+  color: #f3ebe0;
+}
+
+.swatch-booth {
+  background-color: #211c17;
+  color: #f3ebe0;
+}
+
+.swatch-cream {
+  background-color: #f3ebe0;
+  color: #15120f;
+}
+
+.swatch-amber {
+  background-color: #f2a93b;
+  color: #15120f;
+}
+
+.swatch-amber-dim {
+  background-color: #a87527;
+  color: #15120f;
+}
+
+/* The type samples are set in the font they describe */
+.type-display {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.type-body {
+  font-family: var(--font-body);
+  font-size: var(--step-1);
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.type-mono {
+  font-family: var(--font-mono);
+  font-size: var(--step-0);
+  text-transform: none;
+}
+
+.spec-table {
+  width: 100%;
+  margin-bottom: var(--space-m);
+  border-collapse: collapse;
+  font-size: var(--step--1);
+}
+
+.spec-table th,
+.spec-table td {
+  padding: var(--space-2xs) var(--space-xs);
+  border-bottom: var(--rule);
+  text-align: left;
+  vertical-align: top;
+}
+
+.spec-table thead th {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--amber);
+  border-bottom: 2px solid var(--amber-dim);
+}
+
+.spec-table tbody tr:hover {
+  background-color: var(--booth);
+}
+
+/* The table is the one thing here that can get too wide for a phone, so it
+   scrolls sideways inside its own box instead of pushing the page out */
+.table-scroll {
+  overflow-x: auto;
+  margin-bottom: var(--space-m);
+}

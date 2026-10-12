@@ -1,1 +1,273 @@
-Specifications
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Specifications | Victor's Voicing</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/waveform.css">
+  <link rel="stylesheet" href="css/media-query.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/doc.css">
+
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="media/images/logo-80.png" alt="" width="40" height="40">
+        <span class="brand-name">Victor's <span>Voicing</span></span>
+      </a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+      <label class="nav-button" for="nav-toggle"><span class="nav-button-bars"></span>Menu</label>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="demos.html">Demos</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+          <li><a class="nav-link nav-cta" href="booking.html">Book Victor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="section page-header">
+      <div class="shell">
+        <p class="eyebrow">Specification</p>
+        <h1>What was <span>agreed</span></h1>
+        <p class="lead">The plan this site was built against. Written before the code, so that finished means
+          something.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell doc">
+        <h2>The <span>customer</span></h2>
+        <ul>
+          <li>Victor, voice actor, Helsinki.</li>
+          <li>Worked privately for several voice acting companies from 2021 to 2024. Three years.</li>
+          <li>Mainly adult animation.</li>
+          <li>Continues now as a freelancer, because he enjoys it.</li>
+          <li>This is not his income. It is a hobby that might turn useful.</li>
+        </ul>
+
+        <h2>Starting <span>point</span></h2>
+        <ul>
+          <li>Nothing online yet. He only just picked it up again.</li>
+          <li>No Instagram, no old site, nothing to migrate.</li>
+          <li>This site is his first public presence, so it has to carry everything on its own.</li>
+        </ul>
+
+        <h2>Target <span>audience</span></h2>
+        <ul>
+          <li>Indie game studios, animation producers, ad and e-learning producers.</li>
+          <li>Friends of Victor, for fun.</li>
+        </ul>
+
+        <h2>Purpose and <span>success</span></h2>
+        <ul>
+          <li>Tell people who Victor is and what he has done.</li>
+          <li>Let them hear him.</li>
+          <li>Give them two ways in: the booking form, or an email.</li>
+        </ul>
+        <p>The site counts as a success once three paid enquiries have come in through it. That is the number we agreed
+          to measure against, not a feeling about the design.</p>
+
+        <h2>Out of <span>scope</span></h2>
+        <p>Written down so it cannot be asked for later without a new agreement:</p>
+        <ul>
+          <li>Online payment.</li>
+          <li>Login area or user accounts.</li>
+          <li>A blog.</li>
+          <li>Finnish or Swedish translations of the site.</li>
+          <li>A booking calendar.</li>
+          <li>A content management system.</li>
+        </ul>
+
+        <h2>Why Victor cannot edit the <span>text himself</span></h2>
+        <p>The pages are written by hand in HTML and CSS. There is no editing interface behind them, because a content
+          management system was not in scope and would have cost more than the whole site. In practice that means
+          Victor sends the new wording and the developer puts it in.</p>
+        <p>This is a deliberate trade. A hand-written site is small, fast and has nothing to keep updated for security.
+          The price is that text changes are not self-service.</p>
+
+        <h2>How we <span>worked</span></h2>
+        <dl class="meta-list">
+          <dt>Specification first</dt>
+          <dd>This document was agreed before any code was written. It is what the result is measured against.</dd>
+          <dt>Mobile first</dt>
+          <dd>Every layout was built for the narrow screen first, then widened. It is easier to add space than to take
+            it away.</dd>
+          <dt>Version control</dt>
+          <dd>Every change is a commit in Git, so there is a dated history of what changed and a way back if something
+            breaks.</dd>
+          <dt>Small steps</dt>
+          <dd>One page at a time, reviewed in the browser before moving on, instead of one big reveal at the end.</dd>
+        </dl>
+
+        <h2>Service <span>terms</span></h2>
+        <ul>
+          <li>Prices are agreed per job. Nothing fixed is published on the site.</li>
+          <li>As a rough orientation: around 100 to 200 euro for a short job, around 8 euro per finished minute for
+            longer narration.</li>
+          <li>Replies within two or three days at the latest.</li>
+          <li>Audio back within three working days of the script arriving.</li>
+          <li>Two or three takes per line. If none fit, the next round is free.</li>
+          <li>Recordings in English. Direction in English, Finnish or Swedish.</li>
+        </ul>
+
+        <h2>Where he <span>records</span></h2>
+        <ul>
+          <li>Victor records at his own place. His address is not published anywhere on the site.</li>
+          <li>Cornern, Roomankatu 5 in Helsinki, is only the meeting point if a customer asks for a session in person.
+          </li>
+          <li>There are no opening hours. A time is agreed privately.</li>
+          <li>Most customers never visit. They send a script and receive audio.</li>
+        </ul>
+
+        <h2>Responsiveness, and its <span>limits</span></h2>
+        <p>Promised, and tested:</p>
+        <div class="table-scroll">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th scope="col">Device</th>
+                <th scope="col">Width</th>
+                <th scope="col">Supported</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Phone, portrait</td>
+                <td>from 360px</td>
+                <td>Yes, this is the starting point</td>
+              </tr>
+              <tr>
+                <td>Tablet</td>
+                <td>from 768px</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Laptop and desktop</td>
+                <td>from 1024px</td>
+                <td>Yes, the menu unfolds here</td>
+              </tr>
+              <tr>
+                <td>Large screen and 4K</td>
+                <td>from 1600px</td>
+                <td>Yes, wider measure and larger type</td>
+              </tr>
+              <tr>
+                <td>Smartwatch</td>
+                <td>under 300px</td>
+                <td>No, out of scope</td>
+              </tr>
+              <tr>
+                <td>8K</td>
+                <td>beyond 4K</td>
+                <td>No, out of scope</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Three breakpoints, at 768, 1024 and 1600 pixels. There is no JavaScript on the site at all, so it also
+          works with scripting switched off. Internet Explorer is not supported.</p>
+
+        <h2>Colour <span>scheme</span></h2>
+        <p>Dark theme, warm amber light in a dark booth. The interface borrows from studio hardware: engraved labels,
+          level meters, and the visual energy spent on the audio rather than on decoration.</p>
+        <ul class="swatch-list">
+          <li class="swatch swatch-ink"><span>--ink</span> #15120F<br>page background</li>
+          <li class="swatch swatch-booth"><span>--booth</span> #211C17<br>panels and cards</li>
+          <li class="swatch swatch-cream"><span>--cream</span> #F3EBE0<br>body text</li>
+          <li class="swatch swatch-amber"><span>--amber</span> #F2A93B<br>accent and hover</li>
+          <li class="swatch swatch-amber-dim"><span>--amber-dim</span> #A87527<br>inactive amber</li>
+        </ul>
+
+        <h2>Type <span>choices</span></h2>
+        <dl class="meta-list">
+          <dt class="type-display">Oswald</dt>
+          <dd>Headings, menu and buttons. Condensed and loud, the way a stage name should look.</dd>
+          <dt class="type-body">Inter</dt>
+          <dd>Body text. Plain, modern and readable at small sizes.</dd>
+          <dt class="type-mono">JetBrains Mono</dt>
+          <dd>Small labels. Reads like text engraved on a mixing desk.</dd>
+        </dl>
+
+        <h2>Site <span>map</span></h2>
+        <p>Solid arrows are the main menu, which sits on every page. Dashed boxes are reached from inside a page or
+          from the footer.</p>
+        <figure class="featured sitemap-figure">
+          <img src="media/images/sitemap.svg"
+            alt="Site map: the home page leads to About, Demos, Contact and Booking. Demos contains the gallery in an iframe. The footer on every page links to the specification and the web report."
+            width="760" height="460">
+          <figcaption>Drawn as SVG, so it stays sharp at any size.</figcaption>
+        </figure>
+
+        <h2>Layout <span>plan</span></h2>
+        <p>Every page is built from the same three parts, so the site feels like one place:</p>
+        <ul>
+          <li><strong>Header</strong> with the logo on the left and the menu on the right. It sticks to the top while
+            you scroll. Under 1024 pixels the menu folds into a button.</li>
+          <li><strong>Main</strong> as a stack of sections. Each one opens with a small label, then a heading, then
+            the content. Sections are separated by a thin rule rather than by boxes.</li>
+          <li><strong>Footer</strong> with the booking links, the project links and a back to top link.</li>
+        </ul>
+        <p>The home page is the only one with a two-column hero. Everything else uses the same single column that
+          splits into two at the tablet breakpoint.</p>
+
+        <h2>What <span>finished means</span></h2>
+        <ul>
+          <li>Seven pages, all with a title, a heading, text and links.</li>
+          <li>Audio, video, a picture gallery and a map embedded.</li>
+          <li>Every page passing the W3C HTML validator, every stylesheet passing the CSS validator.</li>
+          <li>The web report written as one of the pages.</li>
+        </ul>
+
+        <p class="button-row">
+          <a class="button button-primary" href="report.html">Read the report</a>
+          <a class="button" href="index.html">Back to the home page</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+
+        <section>
+          <h2>Book</h2>
+          <ul class="footer-list">
+            <li><a href="booking.html">Booking form</a></li>
+            <li><a href="contact.html">Contact and studio</a></li>
+            <li><a href="mailto:victor@victorsvoicing.fi?subject=Voice%20booking%20enquiry">victor@victorsvoicing.fi</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Project</h2>
+          <ul class="footer-list">
+            <li><a href="report.html">Report on the project</a></li>
+            <li><a href="specifications.html">Specifications</a></li>
+            <li><a href="https://github.com/sillymeowmeow69/course-project-1">Github</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p><a href="#top">↑ Back to top</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
