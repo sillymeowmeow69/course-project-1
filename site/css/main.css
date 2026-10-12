@@ -36,13 +36,12 @@
   --space-3xl: 6.5rem;
 
   --rule: 1px solid var(--foam);
+  --radius: 4px;
   --shell: 1320px;
   --gutter: clamp(1rem, 4vw, 3rem);
 }
 
 
-/* Box-sizing reset: without this, width:100% + padding (eg. .shell) adds
-   padding on top of the width instead of inside it, overflowing the viewport */
 *,
 *::before,
 *::after {
@@ -76,11 +75,42 @@ svg {
   height: auto;
 }
 
-/* <audio>/<video> default to a fixed intrinsic width (eg. ~300px for audio)
-   that doesn't shrink inside narrow flex/grid items, so force it to fill instead */
 audio,
 video {
   width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  margin-block: 0 var(--space-xs);
+}
+
+h1 {
+  font-size: var(--step-4);
+}
+
+h2 {
+  font-size: var(--step-2);
+}
+
+h3 {
+  font-size: var(--step-1);
+}
+
+h1 span,
+h2 span {
+  color: var(--amber);
+}
+
+p {
+  max-width: 68ch;
+  margin-block: 0 var(--space-s);
 }
 
 /* A tag color scheme */
@@ -160,14 +190,6 @@ main {
   padding-inline: var(--gutter);
 }
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background-color: rgba(21, 18, 15, 0.94);
-  border-bottom: var(--rule);
-}
-
 .eyebrow {
   font-family: var(--font-mono);
   font-size: var(--step--1);
@@ -239,6 +261,40 @@ main {
   color: var(--amber);
 }
 
+
+.pull-quote {
+  margin: 0 0 var(--space-m) 0;
+  padding: var(--space-m);
+  background-color: var(--booth);
+  border-left: 3px solid var(--amber);
+  border-radius: var(--radius);
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.pull-quote p {
+  margin: 0;
+  max-width: none;
+}
+
+.pull-quote cite {
+  display: block;
+  margin-top: var(--space-2xs);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  font-style: normal;
+  letter-spacing: 0.14em;
+  text-transform: none;
+  color: var(--muted);
+}
+
+.flow-text::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
 .button-row {
   display: flex;

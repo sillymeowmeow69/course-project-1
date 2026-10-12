@@ -12,14 +12,16 @@
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  /* Enough measure to wrap text beside a floated block */
+  .pull-quote {
+    float: right;
+    width: 17rem;
+    margin-left: var(--space-l);
+  }
 }
 
 
-/*
-  Nav bar desktop override.
-
-  enough room to show the links permanently so we undo all folding by removing/hiding stuff and lay menu out flat
-*/
 @media (min-width: 1024px) {
 
   .nav-toggle,
@@ -70,5 +72,25 @@
 
   .nav-cta[aria-current="page"] {
     border-bottom-color: transparent;
+  }
+}
+
+
+/*
+  Third breakpoint: large desktop and 4K.
+*/
+@media (min-width: 1600px) {
+  :root {
+    --shell: 1560px;
+    --step-0: 1.0625rem;
+    --step-5: 3.1rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .pull-quote {
+    width: 21rem;
   }
 }
