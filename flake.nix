@@ -8,7 +8,8 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
 
-      serve = pkgs.writers.writePython3Bin "serve" { }
+      serve = pkgs.writers.writePython3Bin "serve"
+        { flakeIgnore = [ "E111" "E117" ]; }
         (builtins.readFile ./scripts/nocache_server.py);
 
       build = pkgs.writeShellApplication {
