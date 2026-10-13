@@ -88,28 +88,26 @@
         </div>
 
         <h2>The <span>inspiration</span></h2>
-        <p>I have a friend of mine named Victor who sometimes does funny voice impressions and used to voice act so i
-          chose to make a website for him.
-        </p>
-        <p>Some parts of the story are true some are not I balanced the story with reality out a little and am pretty
-          satisfied with the final result</p>
+        <p>I have a friend named Victor who sometimes does funny voice impressions and used to voice act, so I chose to
+          make a website for him.</p>
+        <p>Some parts of the story are true and some are not. I balanced the story against reality a little, and I am
+          pretty satisfied with the final result.</p>
 
         <h2>The <span>plan</span></h2>
-        <p>At the beginning i was considering to just do everything with AI, but after it fully implemeted my idea I
-          noticed that, while the final product is very impressive, I wouldnt be learning anything from that. I wanted
-          to somewhat enjoy the learning process myself and started writing by
-          hand.</p>
-        <p>I have started with the story about the customer. I basically went throgh the course project pdf file from
-          top to bottom and wrote down everything that had to be checked for the story and specification document.</p>
-        <p>What I learned from past projects is that making a plan and first thinking about the working environment and
-          setting up initial scalable infrastructure is one of the most important things in such project.</p>
-        <p>This includes several script, namely one serve script used during development and a build/deploy script for
-          deployment.</p>
+        <p>At the beginning I considered just doing everything with AI, but once it had implemented my whole idea I
+          noticed that, while the result was impressive, I would not be learning anything from it. I wanted to enjoy
+          the learning process myself, so I started writing it by hand.</p>
+        <p>I started with the story about the customer. I went through the course project PDF from top to bottom and
+          wrote down everything that had to be covered in the story and in the specification document.</p>
+        <p>What I learned from past projects is that making a plan, thinking about the working environment first and
+          setting up the infrastructure early is one of the most important parts of a project like this.</p>
+        <p>Here that meant two small scripts: a serve script used during development, and a build and deploy script
+          for publishing the site.</p>
 
         <h2>Structure and the <span>page pattern</span></h2>
-        <p>I started off by browsing around and looking at popular webpages and see what design patterns they used. One
-          thing i noticed was that most endpoints look very similar to the home page with shared header, footer and even
-          the main content is structured similarly.</p>
+        <p>I started off by browsing around popular websites to see which design patterns they used. One thing I
+          noticed was that most of their pages look very similar to the home page: the same header and footer, and
+          even the main content is structured the same way.</p>
         <p>Before writing any page I decided on one pattern and stuck to it: a sticky header with the logo and menu, a
           main area built from stacked sections, and a footer with the links. Each section opens with a small label in
           the mono font, then a heading, then the content.</p>
@@ -122,19 +120,21 @@
           that the text wraps around.</p>
 
         <h2>The hard part: the <span>responsive menu</span></h2>
-
-        <p>The solution is a hidden checkbox. In the past i have often been facing problems while coding, back in 2021 I
-          would have to scroll stack overflow for a solution that i can copy and then it would just be trial and error.
-          Nowadays we have AI, but to actually learn yourself from it I have to ask it without it being able to just do
-          all the work itself, like a teacher, not an agent that does all the work on its own. So after a bit of
-          chatting around, i understood the invisible checkbox with the sibling selector</p>
+        <p>Getting the menu to fold away on a phone and unfold on a desktop took the longest, because we have not done
+          JavaScript yet. The solution is a hidden checkbox: a label points at it, and a sibling selector opens the
+          menu when the checkbox is checked.</p>
+        <p>Working that out is where the time went. Back in 2021 I would have scrolled through Stack Overflow for a
+          solution to copy, and from there it was trial and error. Nowadays we have AI, but to actually learn
+          something from it I have to ask it to explain instead of letting it do the work, more like a teacher than an
+          agent. So after a bit of chatting back and forth, I understood the invisible checkbox and the sibling
+          selector.</p>
 
         <h2>The fun part: <span>CSS animation</span></h2>
         <p>The level meter next to the hero on the home page is twenty spans with one keyframe animation on them. The
           animation has four steps rather than just a start and an end, so the bars do not simply rise and fall, they
           wobble the way a real meter does.</p>
-        <p>You can play around a lot with keyframes. After learning about what you can do with them I just played around
-          and went with the vibe and it turned out nicely.</p>
+        <p>There is a lot you can do with keyframes. Once I understood how they work I just experimented, went with
+          the vibe, and it turned out nicely.</p>
 
         <h2>Site <span>map</span></h2>
         <figure class="featured sitemap-figure">
@@ -147,7 +147,8 @@
         <h2>Validation</h2>
         <p>Every page went through the W3C HTML validator and every stylesheet through the CSS validator. Most of what
           came back was small and my own fault: a heading left over from testing, a figure caption in a place it is
-          not allowed, an attribute I had written from memory instead of checking.</p>
+          not allowed, an attribute I had written from memory instead of checking. The final run came back clean on
+          every page and every stylesheet.</p>
         <p>The validator was more useful than I expected. It does not only find broken HTML, it finds the places where
           I guessed.</p>
 
