@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web report | Victor's Voicing</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/waveform.css">
+  <link rel="stylesheet" href="css/media-query.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/doc.css">
+
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="media/images/logo-80.png" alt="" width="40" height="40">
+        <span class="brand-name">Victor's <span>Voicing</span></span>
+      </a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+      <label class="nav-button" for="nav-toggle"><span class="nav-button-bars"></span>Menu</label>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="demos.html">Demos</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+          <li><a class="nav-link nav-cta" href="booking.html">Book Victor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="section page-header">
+      <div class="shell">
+        <p class="eyebrow">Web report</p>
+        <h1>How this site <span>got built</span></h1>
+        <p class="lead">What I did, what fought back, and what I would do differently.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell doc">
+        <h2>Time <span>spent</span></h2>
+        <p>Around 15 hours in total. Roughly split like this:</p>
+        <div class="table-scroll">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th scope="col">Part</th>
+                <th scope="col">Hours</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Planning, specification and the site map</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>HTML structure and the shared page pattern</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>CSS, layout and responsiveness</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Media: pictures, audio, video, gallery, map</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Writing the text, the specification page and this report</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Validation and fixing what it found</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>The <span>inspiration</span></h2>
+        <p>I have a friend of mine named Victor who sometimes does funny voice impressions and used to voice act so i
+          chose to make a website for him.
+        </p>
+        <p>Some parts of the story are true some are not I balanced the story with reality out a little and am pretty
+          satisfied with the final result</p>
+
+        <h2>The <span>plan</span></h2>
+        <p>At the beginning i was considering to just do everything with AI, but after it fully implemeted my idea I
+          noticed that, while the final product is very impressive, I wouldnt be learning anything from that. I wanted
+          to somewhat enjoy the learning process myself and started writing by
+          hand.</p>
+        <p>I have started with the story about the customer. I basically went throgh the course project pdf file from
+          top to bottom and wrote down everything that had to be checked for the story and specification document.</p>
+        <p>What I learned from past projects is that making a plan and first thinking about the working environment and
+          setting up initial scalable infrastructure is one of the most important things in such project.</p>
+        <p>This includes several script, namely one serve script used during development and a build/deploy script for
+          deployment.</p>
+
+        <h2>Structure and the <span>page pattern</span></h2>
+        <p>I started off by browsing around and looking at popular webpages and see what design patterns they used. One
+          thing i noticed was that most endpoints look very similar to the home page with shared header, footer and even
+          the main content is structured similarly.</p>
+        <p>Before writing any page I decided on one pattern and stuck to it: a sticky header with the logo and menu, a
+          main area built from stacked sections, and a footer with the links. Each section opens with a small label in
+          the mono font, then a heading, then the content.</p>
+        <p>Doing it that way was the single best decision in the project. Adding a page became almost mechanical,
+          because the frame was already settled and I only had to think about the content. It also means the site
+          looks like one place rather than seven separate exercises.</p>
+        <p>The layout is held together by a few small classes instead of many specific ones. A <code>.shell</code> for
+          the page width, a <code>.section</code> for the vertical rhythm, a <code>.panel</code> for anything that
+          looks like a card. Grids and flexbox do most of the work. Floats do one job, the portrait on the About page
+          that the text wraps around.</p>
+
+        <h2>The hard part: the <span>responsive menu</span></h2>
+
+        <p>The solution is a hidden checkbox. In the past i have often been facing problems while coding, back in 2021 I
+          would have to scroll stack overflow for a solution that i can copy and then it would just be trial and error.
+          Nowadays we have AI, but to actually learn yourself from it I have to ask it without it being able to just do
+          all the work itself, like a teacher, not an agent that does all the work on its own. So after a bit of
+          chatting around, i understood the invisible checkbox with the sibling selector</p>
+
+        <h2>The fun part: <span>CSS animation</span></h2>
+        <p>The level meter next to the hero on the home page is twenty spans with one keyframe animation on them. The
+          animation has four steps rather than just a start and an end, so the bars do not simply rise and fall, they
+          wobble the way a real meter does.</p>
+        <p>You can play around a lot with keyframes. After learning about what you can do with them I just played around
+          and went with the vibe and it turned out nicely.</p>
+
+        <h2>Site <span>map</span></h2>
+        <figure class="featured sitemap-figure">
+          <img src="media/images/sitemap.svg"
+            alt="Site map: the home page leads to About, Demos, Contact and Booking. Demos contains the gallery in an iframe. The footer on every page links to the specification and the web report."
+            width="760" height="460">
+          <figcaption>The same site map as in the specification.</figcaption>
+        </figure>
+
+        <h2>Validation</h2>
+        <p>Every page went through the W3C HTML validator and every stylesheet through the CSS validator. Most of what
+          came back was small and my own fault: a heading left over from testing, a figure caption in a place it is
+          not allowed, an attribute I had written from memory instead of checking.</p>
+        <p>The validator was more useful than I expected. It does not only find broken HTML, it finds the places where
+          I guessed.</p>
+
+        <h2>What I would do <span>differently</span></h2>
+        <ul>
+          <li>Write the real text earlier. I built the pages with placeholder headings, and placeholders have a way of
+            surviving until the last hour.</li>
+          <li>Split the CSS up from the start. It grew into one long file before I separated the header, footer,
+            animation and page specific parts.</li>
+          <li>Decide the image sizes before exporting anything, instead of exporting twice.</li>
+        </ul>
+
+        <h2>What I <span>learned</span></h2>
+        <p>Two things stuck. The first is that mobile first is not a style rule, it is the easier direction to work
+          in. Starting narrow and adding space as the screen grows is far less painful than starting wide and taking
+          things away.</p>
+        <p>The second is how much HTML and CSS can do on their own. There is no JavaScript anywhere on this site.
+          The menu, the animation, the gallery and the form all work without it, which also means they work with
+          scripting switched off.</p>
+
+        <h2>The <span>course</span></h2>
+        <p>The parts I enjoyed most were the ones where we were told to go and build something rather than follow
+          along. The animation task was the best of those, because the requirement to use more than just a start and
+          an end frame pushed me into actually understanding keyframes instead of copying an example.</p>
+        <p>If anything, I would have liked the responsive menu covered in more detail, since it is the one thing
+          everybody needs and the one thing that is genuinely awkward without JavaScript.</p>
+
+        <h2>Extra <span>points, please</span></h2>
+        <ul>
+          <li>No JavaScript at all. The menu is a checkbox, the gallery is an iframe, everything degrades gracefully.
+          </li>
+          <li>The site map is hand-drawn SVG rather than an exported picture, so it scales and its text is selectable.
+          </li>
+          <li>Page specific stylesheets for the booking form, the gallery and these two text pages, loaded after the
+            shared ones.</li>
+          <li>The whole site is reproducible from a Nix flake, with a small build script and a no-cache dev server, so
+            it builds the same way on any machine.</li>
+          <li>The level meter animation, which I am unreasonably pleased with.</li>
+        </ul>
+
+        <p class="button-row">
+          <a class="button button-primary" href="specifications.html">Read the specification</a>
+          <a class="button" href="index.html">Back to the home page</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+
+        <section>
+          <h2>Book</h2>
+          <ul class="footer-list">
+            <li><a href="booking.html">Booking form</a></li>
+            <li><a href="contact.html">Contact and studio</a></li>
+            <li><a href="mailto:victor@victorsvoicing.fi?subject=Voice%20booking%20enquiry">victor@victorsvoicing.fi</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Project</h2>
+          <ul class="footer-list">
+            <li><a href="report.html">Report on the project</a></li>
+            <li><a href="specifications.html">Specifications</a></li>
+            <li><a href="https://github.com/sillymeowmeow69/course-project-1">Github</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p><a href="#top">↑ Back to top</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
